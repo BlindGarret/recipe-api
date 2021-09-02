@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RTS.Template.API</name>
+    </assembly>
+    <members>
+        <member name="T:RTS.Template.API.ApplicationMappings">
+            <summary>
+            Automapper class for mapping application models to data transfer objects
+            </summary>
+        </member>
+        <member name="M:RTS.Template.API.ApplicationMappings.ConfigureMappings(AutoMapper.IMapperConfigurationExpression)">
+            <summary>
+            Configure the mappings defined
+            </summary>
+        </member>
+        <member name="T:RTS.Template.API.Controllers.PingController">
+            <inheritdoc />
+        </member>
+        <member name="M:RTS.Template.API.Controllers.PingController.Ping">
+            <summary>
+            Simple ping call for testing connectivity
+            </summary>
+        </member>
+        <member name="M:RTS.Template.API.Controllers.PingController.PingAuth">
+            <summary>
+            Simple Auth ping call for testing connectivity
+            </summary>
+        </member>
+        <member name="T:RTS.Template.API.Database.NhibernateConfigurationFactory">
+            <summary>
+            Factory used to build NHibernate configurations
+            </summary>
+        </member>
+        <member name="M:RTS.Template.API.Database.NhibernateConfigurationFactory.Create``2(System.String,System.Collections.Generic.IEnumerable{System.Type},NHibernate.IInterceptor)">
+            <summary>
+            Creates an NHibernate configuration
+            </summary>
+            <typeparam name="TDialect">NHibernate Dialect to use</typeparam>
+            <typeparam name="TDriver">NHibernate Driver to use</typeparam>
+            <param name="connectionString">Connection string for DB</param>
+            <param name="types">A set of datamapping types</param>
+            <param name="sqlInterceptor">Interceptor for SQL statements</param>
+            <returns><see cref="T:NHibernate.Cfg.Configuration"/></returns>
+        </member>
+        <member name="T:RTS.Template.API.Database.SqlDebugOutputInterceptor">
+            <summary>
+            Debug output interceptor which console logs any SQL statements made
+            </summary>
+        </member>
+        <member name="M:RTS.Template.API.Database.SqlDebugOutputInterceptor.OnPrepareStatement(NHibernate.SqlCommand.SqlString)">
+            <summary>
+            On Prepare hook for statements
+            </summary>
+            <param name="sql"><see cref="T:NHibernate.SqlCommand.SqlString"/></param>
+            <returns><see cref="T:NHibernate.SqlCommand.SqlString"/></returns>
+        </member>
+        <member name="T:RTS.Template.API.Dtos.StoreDto">
+            <summary>
+            Example VM
+            </summary>
+        </member>
+        <member name="P:RTS.Template.API.Dtos.StoreDto.Id">
+            <summary>
+            2-3 Character Id for the store
+            </summary>
+        </member>
+        <member name="P:RTS.Template.API.Dtos.StoreDto.Number">
+            <summary>
+            Numeric Id for the store
+            </summary>
+        </member>
+        <member name="P:RTS.Template.API.Dtos.StoreDto.Name">
+            <summary>
+            Name of the store
+            </summary>
+        </member>
+        <member name="P:RTS.Template.API.Dtos.StoreDto.IsDormed">
+            <summary>
+            Flag for whether to use the dormed workflow for the store
+            </summary>
+        </member>
+        <member name="T:RTS.Template.API.Program">
+            <summary>
+            Starting point of program
+            </summary>
+        </member>
+        <member name="M:RTS.Template.API.Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+        </member>
+        <member name="M:RTS.Template.API.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Setup builder for hosting the API
+            </summary>
+        </member>
+        <member name="T:RTS.Template.API.Startup">
+            <summary>
+            API Bootstrapping Class
+            </summary>
+        </member>
+        <member name="M:RTS.Template.API.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:RTS.Template.API.Startup.Configuration">
+            <summary>
+            API Configuration
+            </summary>
+        </member>
+        <member name="M:RTS.Template.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure Services for API
+            </summary>
+        </member>
+        <member name="M:RTS.Template.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configures the HTTP Pipeline
+            </summary>
+        </member>
+        <member name="M:RTS.Template.API.Startup.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registers services with DI
+            </summary>
+        </member>
+    </members>
+</doc>
