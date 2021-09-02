@@ -1,23 +1,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/rts-core/CSharp.API.Template">
+  <a href="https://github.com/BlindGarret/recipe-api">
     <img src="images/logo.png" alt="Logo" width="150">
   </a>
 
-  <h3 align="center">C# API Template</h3>
+  <h3 align="center">RecipeBook</h3>
 
   <p align="center">
-    An API template for C# inside the RTS Ecosystem.
+    A simple recipe API for the Home Recipe Cookbook project.
     <br />
-    <a href="https://github.com/rts-core/CSharp.API.Template/issues">Report Bug</a> |
-    <a href="https://github.com/rts-core/CSharp.API.Template/issues">Request Feature</a>
+    <a href="https://github.com/BlindGarret/recipe-api/issues">Report Bug</a> |
+    <a href="https://github.com/BlindGarret/recipe-api/issues">Request Feature</a>
   </p>
 </p>
 
 ### Built With
 
-* [NetCore 3.1](https://netcore.microsoft.com/)
+* [NetCore 5](https://netcore.microsoft.com/)
 * [Docker](https://www.docker.com/)
 * [AutoMapper](https://automapper.org/)
 * [JWT](https://github.com/jwt-dotnet/jwt)
@@ -34,20 +34,20 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-A repository which has used this template as it's starting point.
+Visual Studio 2019+
 
 ### Installation
 
-1. Run the initialize script (Avoid spaces in name of project)
-   ```ps1
-   Initialize.ps1 "<Project Name>"
-   ```
+The application is designed to simply be debugged via the VS2019 debug functionality. The only requirement is that you have a
+MySql Instance to hook up to via the connection string inside RecipeBook.Api/appsettings.Development.json. There is a provided docker-compose.yml
+which will allow you to standup a local instance of MySQL with dev settings using the command:
 
-This will rename all files, do a find a replace, and leave you with a project ready to run.
+```ps1
+    docker compose up -d
+```
+
 
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/rts-core/CSharp.API.Template](https://github.com/rts-core/CSharp.API.Template)
-
-Copyright [2021] [Real Technology Solutions LLC]
+Project Link: [https://github.com/BlindGarret/recipe-api](https://github.com/BlindGarret/recipe-api)

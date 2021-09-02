@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RecipeBook.Api</name>
+    </assembly>
+    <members>
+        <member name="T:RecipeBook.Api.ApplicationMappings">
+            <summary>
+            Automapper class for mapping application models to data transfer objects
+            </summary>
+        </member>
+        <member name="M:RecipeBook.Api.ApplicationMappings.ConfigureMappings(AutoMapper.IMapperConfigurationExpression)">
+            <summary>
+            Configure the mappings defined
+            </summary>
+        </member>
+        <member name="T:RecipeBook.Api.Controllers.PingController">
+            <inheritdoc />
+        </member>
+        <member name="M:RecipeBook.Api.Controllers.PingController.Ping">
+            <summary>
+            Simple ping call for testing connectivity
+            </summary>
+        </member>
+        <member name="M:RecipeBook.Api.Controllers.PingController.PingAuth">
+            <summary>
+            Simple Auth ping call for testing connectivity
+            </summary>
+        </member>
+        <member name="T:RecipeBook.Api.Database.NhibernateConfigurationFactory">
+            <summary>
+            Factory used to build NHibernate configurations
+            </summary>
+        </member>
+        <member name="M:RecipeBook.Api.Database.NhibernateConfigurationFactory.Create``2(System.String,System.Collections.Generic.IEnumerable{System.Type},NHibernate.IInterceptor)">
+            <summary>
+            Creates an NHibernate configuration
+            </summary>
+            <typeparam name="TDialect">NHibernate Dialect to use</typeparam>
+            <typeparam name="TDriver">NHibernate Driver to use</typeparam>
+            <param name="connectionString">Connection string for DB</param>
+            <param name="types">A set of datamapping types</param>
+            <param name="sqlInterceptor">Interceptor for SQL statements</param>
+            <returns><see cref="T:NHibernate.Cfg.Configuration"/></returns>
+        </member>
+        <member name="T:RecipeBook.Api.Database.SqlDebugOutputInterceptor">
+            <summary>
+            Debug output interceptor which console logs any SQL statements made
+            </summary>
+        </member>
+        <member name="M:RecipeBook.Api.Database.SqlDebugOutputInterceptor.OnPrepareStatement(NHibernate.SqlCommand.SqlString)">
+            <summary>
+            On Prepare hook for statements
+            </summary>
+            <param name="sql"><see cref="T:NHibernate.SqlCommand.SqlString"/></param>
+            <returns><see cref="T:NHibernate.SqlCommand.SqlString"/></returns>
+        </member>
+        <member name="T:RecipeBook.Api.Dtos.StoreDto">
+            <summary>
+            Example VM
+            </summary>
+        </member>
+        <member name="P:RecipeBook.Api.Dtos.StoreDto.Id">
+            <summary>
+            2-3 Character Id for the store
+            </summary>
+        </member>
+        <member name="P:RecipeBook.Api.Dtos.StoreDto.Number">
+            <summary>
+            Numeric Id for the store
+            </summary>
+        </member>
+        <member name="P:RecipeBook.Api.Dtos.StoreDto.Name">
+            <summary>
+            Name of the store
+            </summary>
+        </member>
+        <member name="P:RecipeBook.Api.Dtos.StoreDto.IsDormed">
+            <summary>
+            Flag for whether to use the dormed workflow for the store
+            </summary>
+        </member>
+        <member name="T:RecipeBook.Api.Program">
+            <summary>
+            Starting point of program
+            </summary>
+        </member>
+        <member name="M:RecipeBook.Api.Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+        </member>
+        <member name="M:RecipeBook.Api.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Setup builder for hosting the API
+            </summary>
+        </member>
+        <member name="T:RecipeBook.Api.Startup">
+            <summary>
+            API Bootstrapping Class
+            </summary>
+        </member>
+        <member name="M:RecipeBook.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:RecipeBook.Api.Startup.Configuration">
+            <summary>
+            API Configuration
+            </summary>
+        </member>
+        <member name="M:RecipeBook.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure Services for API
+            </summary>
+        </member>
+        <member name="M:RecipeBook.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Configures the HTTP Pipeline
+            </summary>
+        </member>
+        <member name="M:RecipeBook.Api.Startup.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registers services with DI
+            </summary>
+        </member>
+    </members>
+</doc>

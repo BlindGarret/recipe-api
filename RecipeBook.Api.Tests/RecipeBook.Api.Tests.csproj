@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Integration\" />
+    <Folder Include="Unit\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RecipeBook.Api\RecipeBook.Api.csproj" />
+    <ProjectReference Include="..\RecipeBook.Testing.Utilities\RecipeBook.Testing.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>
